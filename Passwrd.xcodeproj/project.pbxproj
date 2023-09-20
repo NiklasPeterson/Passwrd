@@ -23,6 +23,7 @@
 		42AA705A2ABA27560035FA21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42AA705C2ABA27560035FA21 /* Passwrd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Passwrd.entitlements; sourceTree = "<group>"; };
 		42AA705E2ABA27560035FA21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		42C339FF2ABB185A00A9FA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		42AA70552ABA27550035FA21 /* Passwrd */ = {
 			isa = PBXGroup;
 			children = (
+				42C339FF2ABB185A00A9FA60 /* Info.plist */,
 				42AA70562ABA27550035FA21 /* PasswrdApp.swift */,
 				42AA70582ABA27550035FA21 /* ContentView.swift */,
 				42410FF02ABA3D0F004D90EB /* AboutView.swift */,
@@ -287,6 +289,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Passwrd/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Passwrd;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -330,6 +333,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Passwrd/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Passwrd;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
