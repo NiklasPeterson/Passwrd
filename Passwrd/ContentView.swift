@@ -15,9 +15,11 @@ struct ContentView: View {
                 openPasswordSettings()
             }.keyboardShortcut("o")
             
-            SettingsLink{
-                Text("About")
-            }.keyboardShortcut("a")
+            if #available(macOS 14.0, *) {
+                SettingsLink{
+                    Text("About")
+                }.keyboardShortcut("a")
+            }
             
             Divider()
 

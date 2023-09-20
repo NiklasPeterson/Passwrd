@@ -19,12 +19,12 @@ struct PasswrdApp: App {
                 .navigationTitle("About Passwrd")
         }
         
-        #if os(macOS)
-        MenuBarExtra("Passwrd", systemImage: "key.fill"){
-            ContentView()
+        if #available(macOS 14, *) {
+            MenuBarExtra("Passwrd", systemImage: "key.fill"){
+                ContentView()
+            }
+            .menuBarExtraStyle(.menu)
         }
-        .menuBarExtraStyle(.menu)
-        #endif
     }
     
 }
@@ -56,7 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             // Add menu items
             let openPasswordSettingsItem = NSMenuItem(title: "Open Passwords", action: #selector(openPasswordSettings(_:)), keyEquivalent: "o")
-            let showPreferencesItem = NSMenuItem(title: "Settings", action: #selector(showPreferences(_:)), keyEquivalent: ",")
+            let showPreferencesItem = NSMenuItem(title: "About", action: #selector(showPreferences(_:)), keyEquivalent: "a")
             let quitAppItem = NSMenuItem(title: "Quit", action: #selector(quitApp(_:)), keyEquivalent: "q")
             
             menu.addItem(openPasswordSettingsItem)
@@ -80,13 +80,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func openPasswordSettings(_ sender: AnyObject?) {
-        if isSupportedVersion() {
             if let url = URL(string: "x-apple.systempreferences:com.apple.Passwords-Settings.extension") {
                 NSWorkspace.shared.open(url)
             }
-        } else {
-            openLegacyPasswordSettings()
-        }
+        
     }
     
     @objc func isSupportedVersion() -> Bool {
@@ -101,12 +98,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func showPreferences(_ sender: AnyObject?) {
-        if #available(macOS 13.0, *) {
-            NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
-        } else {
-            // Fallback to showPreferencesWindow: for older macOS versions
-            NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
-        }
+        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
     }
     
     @objc func quitApp(_ sender: AnyObject?) {
