@@ -27,7 +27,7 @@ struct ContentView: View {
             
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
-            }
+            }.keyboardShortcut("q")
         }
     }
 }
