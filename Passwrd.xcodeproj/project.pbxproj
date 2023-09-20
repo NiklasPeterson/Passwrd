@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42410FEF2ABA3CEE004D90EB /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42410FEE2ABA3CEE004D90EB /* PreferenceView.swift */; };
+		42410FF12ABA3D0F004D90EB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42410FF02ABA3D0F004D90EB /* AboutView.swift */; };
+		42410FF32ABA3D22004D90EB /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42410FF22ABA3D22004D90EB /* GeneralView.swift */; };
+		42943ED72ABA57820082AD66 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 42943ED62ABA57820082AD66 /* LaunchAtLogin */; };
 		42AA70572ABA27550035FA21 /* PasswrdApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AA70562ABA27550035FA21 /* PasswrdApp.swift */; };
 		42AA70592ABA27550035FA21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AA70582ABA27550035FA21 /* ContentView.swift */; };
 		42AA705B2ABA27560035FA21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42AA705A2ABA27560035FA21 /* Assets.xcassets */; };
@@ -14,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42410FEE2ABA3CEE004D90EB /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
+		42410FF02ABA3D0F004D90EB /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		42410FF22ABA3D22004D90EB /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		42AA70532ABA27550035FA21 /* Passwrd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passwrd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42AA70562ABA27550035FA21 /* PasswrdApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswrdApp.swift; sourceTree = "<group>"; };
 		42AA70582ABA27550035FA21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,12 +34,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42943ED72ABA57820082AD66 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42410FED2ABA3CD5004D90EB /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				42410FEE2ABA3CEE004D90EB /* PreferenceView.swift */,
+				42410FF22ABA3D22004D90EB /* GeneralView.swift */,
+				42410FF02ABA3D0F004D90EB /* AboutView.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 		42AA704A2ABA27550035FA21 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +72,7 @@
 			children = (
 				42AA70562ABA27550035FA21 /* PasswrdApp.swift */,
 				42AA70582ABA27550035FA21 /* ContentView.swift */,
+				42410FED2ABA3CD5004D90EB /* Preferences */,
 				42AA705A2ABA27560035FA21 /* Assets.xcassets */,
 				42AA705C2ABA27560035FA21 /* Passwrd.entitlements */,
 				42AA705D2ABA27560035FA21 /* Preview Content */,
@@ -85,6 +104,9 @@
 			dependencies = (
 			);
 			name = Passwrd;
+			packageProductDependencies = (
+				42943ED62ABA57820082AD66 /* LaunchAtLogin */,
+			);
 			productName = Passwrd;
 			productReference = 42AA70532ABA27550035FA21 /* Passwrd.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 42AA704A2ABA27550035FA21;
+			packageReferences = (
+				42943ED52ABA57820082AD66 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 42AA70542ABA27550035FA21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42410FF12ABA3D0F004D90EB /* AboutView.swift in Sources */,
 				42AA70592ABA27550035FA21 /* ContentView.swift in Sources */,
 				42AA70572ABA27550035FA21 /* PasswrdApp.swift in Sources */,
+				42410FF32ABA3D22004D90EB /* GeneralView.swift in Sources */,
+				42410FEF2ABA3CEE004D90EB /* PreferenceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +302,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Passwrd;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -292,10 +323,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niklaspeterson.Passwrd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -312,6 +344,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Passwrd;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -330,10 +365,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niklaspeterson.Passwrd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -359,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42943ED52ABA57820082AD66 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42943ED62ABA57820082AD66 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42943ED52ABA57820082AD66 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42AA704B2ABA27550035FA21 /* Project object */;
 }
