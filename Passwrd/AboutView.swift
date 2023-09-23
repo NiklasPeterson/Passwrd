@@ -59,7 +59,7 @@ struct AboutView: View {
                         Text("Made by [Niklas](https://twitter.com/niklas_peterson)")
                         .foregroundColor(.primary)
                         
-                        Text("Late night of Tuesday, September 19")
+                        Text("Late night of Tuesday, September 19 2023")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
